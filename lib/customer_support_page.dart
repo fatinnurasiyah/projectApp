@@ -6,7 +6,6 @@ class CustomerSupportPage extends StatefulWidget {
   @override
   _CustomerSupportPageState createState() => _CustomerSupportPageState();
 }
-
 class _CustomerSupportPageState extends State<CustomerSupportPage> {
   final String phoneNumber = '60164805956';
   final TextEditingController _chatController = TextEditingController();
@@ -21,7 +20,6 @@ class _CustomerSupportPageState extends State<CustomerSupportPage> {
       );
     }
   }
-
   Future<void> _openWhatsApp(BuildContext context) async {
     String message = _chatController.text.trim();
     if (message.isEmpty) {
@@ -30,11 +28,9 @@ class _CustomerSupportPageState extends State<CustomerSupportPage> {
       );
       return;
     }
-
     final Uri whatsappUri = Uri.parse(
       'https://api.whatsapp.com/send?phone=60164805956&text=TripJr%20%20!!',
     );
-
     if (await canLaunchUrl(whatsappUri)) {
       await launchUrl(whatsappUri);
     } else {
@@ -165,7 +161,6 @@ class _CustomerSupportPageState extends State<CustomerSupportPage> {
             ),
 
             SizedBox(height: 30),
-
             Text(
               '❓ Frequently Asked Questions',
               style: TextStyle(
