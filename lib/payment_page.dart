@@ -224,7 +224,7 @@ class _PaymentPageState extends State<PaymentPage> {
           obscureText: true,
           validator: (value) {
             if (value == null || value.trim().length != 16) {
-              return 'Enter your 16-digit number';
+             
             }
             return null;
           },
